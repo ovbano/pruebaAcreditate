@@ -59,7 +59,7 @@ class TestAcreditate(unittest.TestCase):
         Prueba que los fines de semana no están restringidos
         """
         date = '2021/04/25'  # Domingo
-        cedula = '2300166101'  # vehículo privado
+        cedula = '2300166101'  # cédula única
         tm = '14:00'  # dentro de las horas laborables
         result = PersonaAcreditada(cedula, date, tm).evaluar()
         self.assertTrue(result)
@@ -71,7 +71,7 @@ class TestAcreditate(unittest.TestCase):
         Pruebe que el tiempo fuera de las horas laborables no está restringido
         """
         date = '2021/04/27'  # martes
-        cedula = '2300166101'  # vehiculo privado prohibido los martes
+        cedula = '2300166101'  # cédula restringida para este día
         tm = '20:00'  # fuera de las horas laborables
         result = PersonaAcreditada(cedula, date, tm).evaluar()
         self.assertTrue(result)
