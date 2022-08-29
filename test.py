@@ -4,6 +4,25 @@ from src.Acreditate import PersonaAcreditada
 
 
 class TestAcreditate(unittest.TestCase):
+    '''
+    La clase TestAcreditate permite realizar pruebas automatizadas.
+    Heredando de la clase unittest.TestCase los atributos necesarios.
+    
+     METODOS
+     --------
+         test_invalid_cedula(self):
+             Pruebe que la cédula no válida genera ValueError
+         test_invalid_date(self):
+             Pruebe que la fecha no válida genera ValueError
+         test_invalid_time(self):
+             Pruebe que el tiempo no válido genera ValueErro
+         test_holiday(self):
+             Prueba que se restringen las vacaciones
+         test_weekend(self):
+             Prueba que los fines de semana no están restringidos
+         test_outside_peak_hours(self):
+             Pruebe que el tiempo fuera de las horas laborables no está restringido
+    '''
 
     def test_invalid_cedula(self):
         """
